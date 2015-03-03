@@ -428,6 +428,7 @@
 		B72741EB1AA5643900914B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEFINES_MODULE = YES;
@@ -446,6 +447,7 @@
 		B72741EC1AA5643900914B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEFINES_MODULE = YES;
@@ -510,6 +512,7 @@
 				B72741EC1AA5643900914B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B72741ED1AA5643900914B7C /* Build configuration list for PBXNativeTarget "ZinniaCocoaTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +521,7 @@
 				B72741EF1AA5643900914B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
