@@ -10,6 +10,30 @@
 		B72741DA1AA5643900914B7C /* ZinniaCocoaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741D91AA5643900914B7C /* ZinniaCocoaTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72741E01AA5643900914B7C /* ZinniaCocoaTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72741D41AA5643900914B7C /* ZinniaCocoaTouch.framework */; };
 		B72741E71AA5643900914B7C /* ZinniaCocoaTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72741E61AA5643900914B7C /* ZinniaCocoaTouchTests.m */; };
+		B72742071AA564C000914B7C /* character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741F11AA564C000914B7C /* character.cpp */; };
+		B72742081AA564C000914B7C /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741F21AA564C000914B7C /* common.h */; };
+		B72742091AA564C000914B7C /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741F31AA564C000914B7C /* config.h */; };
+		B727420A1AA564C000914B7C /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741F41AA564C000914B7C /* feature.cpp */; };
+		B727420B1AA564C000914B7C /* feature.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741F51AA564C000914B7C /* feature.h */; };
+		B727420C1AA564C000914B7C /* freelist.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741F61AA564C000914B7C /* freelist.h */; };
+		B727420D1AA564C000914B7C /* libzinnia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741F71AA564C000914B7C /* libzinnia.cpp */; };
+		B727420E1AA564C000914B7C /* mmap.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741F81AA564C000914B7C /* mmap.h */; };
+		B727420F1AA564C000914B7C /* param.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741F91AA564C000914B7C /* param.cpp */; };
+		B72742101AA564C000914B7C /* param.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741FA1AA564C000914B7C /* param.h */; };
+		B72742111AA564C000914B7C /* recognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741FB1AA564C000914B7C /* recognizer.cpp */; };
+		B72742121AA564C000914B7C /* scoped_ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741FC1AA564C000914B7C /* scoped_ptr.h */; };
+		B72742131AA564C000914B7C /* sexp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72741FD1AA564C000914B7C /* sexp.cpp */; };
+		B72742141AA564C000914B7C /* sexp.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741FE1AA564C000914B7C /* sexp.h */; };
+		B72742151AA564C000914B7C /* stream_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741FF1AA564C000914B7C /* stream_wrapper.h */; };
+		B72742161AA564C000914B7C /* svm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72742001AA564C000914B7C /* svm.cpp */; };
+		B72742171AA564C000914B7C /* svm.h in Headers */ = {isa = PBXBuildFile; fileRef = B72742011AA564C000914B7C /* svm.h */; };
+		B72742181AA564C000914B7C /* trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B72742021AA564C000914B7C /* trainer.cpp */; };
+		B727421C1AA564C000914B7C /* zinnia.h in Headers */ = {isa = PBXBuildFile; fileRef = B72742061AA564C000914B7C /* zinnia.h */; };
+		B72742231AA5659100914B7C /* Recognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B727421F1AA5659100914B7C /* Recognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B72742241AA5659100914B7C /* Recognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742201AA5659100914B7C /* Recognizer.m */; };
+		B72742251AA5659100914B7C /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = B72742211AA5659100914B7C /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B72742261AA5659100914B7C /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742221AA5659100914B7C /* Result.m */; };
+		B72742281AA565F100914B7C /* kvg_tomoe.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* kvg_tomoe.model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +53,33 @@
 		B72741DF1AA5643900914B7C /* ZinniaCocoaTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZinniaCocoaTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72741E51AA5643900914B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B72741E61AA5643900914B7C /* ZinniaCocoaTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZinniaCocoaTouchTests.m; sourceTree = "<group>"; };
+		B72741F11AA564C000914B7C /* character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = character.cpp; sourceTree = "<group>"; };
+		B72741F21AA564C000914B7C /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		B72741F31AA564C000914B7C /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		B72741F41AA564C000914B7C /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feature.cpp; sourceTree = "<group>"; };
+		B72741F51AA564C000914B7C /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
+		B72741F61AA564C000914B7C /* freelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = freelist.h; sourceTree = "<group>"; };
+		B72741F71AA564C000914B7C /* libzinnia.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libzinnia.cpp; sourceTree = "<group>"; };
+		B72741F81AA564C000914B7C /* mmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmap.h; sourceTree = "<group>"; };
+		B72741F91AA564C000914B7C /* param.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = param.cpp; sourceTree = "<group>"; };
+		B72741FA1AA564C000914B7C /* param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = param.h; sourceTree = "<group>"; };
+		B72741FB1AA564C000914B7C /* recognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = recognizer.cpp; sourceTree = "<group>"; };
+		B72741FC1AA564C000914B7C /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_ptr.h; sourceTree = "<group>"; };
+		B72741FD1AA564C000914B7C /* sexp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sexp.cpp; sourceTree = "<group>"; };
+		B72741FE1AA564C000914B7C /* sexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sexp.h; sourceTree = "<group>"; };
+		B72741FF1AA564C000914B7C /* stream_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_wrapper.h; sourceTree = "<group>"; };
+		B72742001AA564C000914B7C /* svm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = svm.cpp; sourceTree = "<group>"; };
+		B72742011AA564C000914B7C /* svm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svm.h; sourceTree = "<group>"; };
+		B72742021AA564C000914B7C /* trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trainer.cpp; sourceTree = "<group>"; };
+		B72742031AA564C000914B7C /* zinnia_convert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zinnia_convert.cpp; sourceTree = "<group>"; };
+		B72742041AA564C000914B7C /* zinnia_learn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zinnia_learn.cpp; sourceTree = "<group>"; };
+		B72742051AA564C000914B7C /* zinnia.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zinnia.cpp; sourceTree = "<group>"; };
+		B72742061AA564C000914B7C /* zinnia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zinnia.h; sourceTree = "<group>"; };
+		B727421F1AA5659100914B7C /* Recognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recognizer.h; sourceTree = "<group>"; };
+		B72742201AA5659100914B7C /* Recognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recognizer.m; sourceTree = "<group>"; };
+		B72742211AA5659100914B7C /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		B72742221AA5659100914B7C /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		B72742271AA565F100914B7C /* kvg_tomoe.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = kvg_tomoe.model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				B72741D91AA5643900914B7C /* ZinniaCocoaTouch.h */,
+				B727421F1AA5659100914B7C /* Recognizer.h */,
+				B72742201AA5659100914B7C /* Recognizer.m */,
+				B72742211AA5659100914B7C /* Result.h */,
+				B72742221AA5659100914B7C /* Result.m */,
+				B72741F01AA5646400914B7C /* src */,
 				B72741D71AA5643900914B7C /* Supporting Files */,
 			);
 			path = ZinniaCocoaTouch;
@@ -80,6 +136,7 @@
 		B72741D71AA5643900914B7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B72742271AA565F100914B7C /* kvg_tomoe.model */,
 				B72741D81AA5643900914B7C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -102,6 +159,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B72741F01AA5646400914B7C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B72741F11AA564C000914B7C /* character.cpp */,
+				B72741F21AA564C000914B7C /* common.h */,
+				B72741F31AA564C000914B7C /* config.h */,
+				B72741F41AA564C000914B7C /* feature.cpp */,
+				B72741F51AA564C000914B7C /* feature.h */,
+				B72741F61AA564C000914B7C /* freelist.h */,
+				B72741F71AA564C000914B7C /* libzinnia.cpp */,
+				B72741F81AA564C000914B7C /* mmap.h */,
+				B72741F91AA564C000914B7C /* param.cpp */,
+				B72741FA1AA564C000914B7C /* param.h */,
+				B72741FB1AA564C000914B7C /* recognizer.cpp */,
+				B72741FC1AA564C000914B7C /* scoped_ptr.h */,
+				B72741FD1AA564C000914B7C /* sexp.cpp */,
+				B72741FE1AA564C000914B7C /* sexp.h */,
+				B72741FF1AA564C000914B7C /* stream_wrapper.h */,
+				B72742001AA564C000914B7C /* svm.cpp */,
+				B72742011AA564C000914B7C /* svm.h */,
+				B72742021AA564C000914B7C /* trainer.cpp */,
+				B72742031AA564C000914B7C /* zinnia_convert.cpp */,
+				B72742041AA564C000914B7C /* zinnia_learn.cpp */,
+				B72742051AA564C000914B7C /* zinnia.cpp */,
+				B72742061AA564C000914B7C /* zinnia.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,7 +195,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72742171AA564C000914B7C /* svm.h in Headers */,
+				B72742231AA5659100914B7C /* Recognizer.h in Headers */,
+				B72742251AA5659100914B7C /* Result.h in Headers */,
+				B72742151AA564C000914B7C /* stream_wrapper.h in Headers */,
+				B727420C1AA564C000914B7C /* freelist.h in Headers */,
 				B72741DA1AA5643900914B7C /* ZinniaCocoaTouch.h in Headers */,
+				B72742081AA564C000914B7C /* common.h in Headers */,
+				B72742091AA564C000914B7C /* config.h in Headers */,
+				B727420B1AA564C000914B7C /* feature.h in Headers */,
+				B72742121AA564C000914B7C /* scoped_ptr.h in Headers */,
+				B72742141AA564C000914B7C /* sexp.h in Headers */,
+				B727420E1AA564C000914B7C /* mmap.h in Headers */,
+				B72742101AA564C000914B7C /* param.h in Headers */,
+				B727421C1AA564C000914B7C /* zinnia.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72742281AA565F100914B7C /* kvg_tomoe.model in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +309,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72742111AA564C000914B7C /* recognizer.cpp in Sources */,
+				B72742181AA564C000914B7C /* trainer.cpp in Sources */,
+				B72742261AA5659100914B7C /* Result.m in Sources */,
+				B727420D1AA564C000914B7C /* libzinnia.cpp in Sources */,
+				B727420A1AA564C000914B7C /* feature.cpp in Sources */,
+				B72742161AA564C000914B7C /* svm.cpp in Sources */,
+				B72742071AA564C000914B7C /* character.cpp in Sources */,
+				B727420F1AA564C000914B7C /* param.cpp in Sources */,
+				B72742241AA5659100914B7C /* Recognizer.m in Sources */,
+				B72742131AA564C000914B7C /* sexp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,10 +428,13 @@
 		B72741EB1AA5643900914B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				INFOPLIST_FILE = ZinniaCocoaTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -333,10 +446,13 @@
 		B72741EC1AA5643900914B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				INFOPLIST_FILE = ZinniaCocoaTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
