@@ -80,6 +80,7 @@
 		B72742211AA5659100914B7C /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		B72742221AA5659100914B7C /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
 		B72742271AA565F100914B7C /* kvg_tomoe.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = kvg_tomoe.model; sourceTree = "<group>"; };
+		B752547E1AA6A04B00831B44 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		B72741CA1AA5643900914B7C = {
 			isa = PBXGroup;
 			children = (
+				B752547E1AA6A04B00831B44 /* CoreFoundation.framework */,
 				B72741D61AA5643900914B7C /* ZinniaCocoaTouch */,
 				B72741E31AA5643900914B7C /* ZinniaCocoaTouchTests */,
 				B72741D51AA5643900914B7C /* Products */,
@@ -438,6 +440,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				INFOPLIST_FILE = ZinniaCocoaTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -457,6 +460,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				INFOPLIST_FILE = ZinniaCocoaTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -475,6 +479,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ZinniaCocoaTouchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -488,6 +493,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ZinniaCocoaTouchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
