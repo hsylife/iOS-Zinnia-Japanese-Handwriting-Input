@@ -20,7 +20,7 @@
 
 - (instancetype)initWithCanvas:(UIView *)canvas {
 	if (self = [super init]) {
-        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"kvg_tomoe" ofType:@"model"];
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
 
 		recognizer = zinnia_recognizer_new();
 		if (!zinnia_recognizer_open(recognizer, [path cStringUsingEncoding:NSASCIIStringEncoding])) {

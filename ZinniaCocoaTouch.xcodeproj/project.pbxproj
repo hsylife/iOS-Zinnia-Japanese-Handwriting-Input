@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72588A81AA996C000BD42F7 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = B72588A41AA996C000BD42F7 /* COPYING */; };
+		B72588A91AA996C000BD42F7 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = B72588A51AA996C000BD42F7 /* AUTHORS */; };
+		B72588AA1AA996C000BD42F7 /* NEWS in Resources */ = {isa = PBXBuildFile; fileRef = B72588A61AA996C000BD42F7 /* NEWS */; };
+		B72588AB1AA996C000BD42F7 /* README in Resources */ = {isa = PBXBuildFile; fileRef = B72588A71AA996C000BD42F7 /* README */; };
+		B72588AD1AA99B4D00BD42F7 /* COPYING_LGPL in Resources */ = {isa = PBXBuildFile; fileRef = B72588AC1AA99B4D00BD42F7 /* COPYING_LGPL */; };
 		B72741DA1AA5643900914B7C /* ZinniaCocoaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = B72741D91AA5643900914B7C /* ZinniaCocoaTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72741E01AA5643900914B7C /* ZinniaCocoaTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72741D41AA5643900914B7C /* ZinniaCocoaTouch.framework */; };
 		B72741E71AA5643900914B7C /* ZinniaCocoaTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72741E61AA5643900914B7C /* ZinniaCocoaTouchTests.m */; };
@@ -33,7 +38,7 @@
 		B72742241AA5659100914B7C /* Recognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742201AA5659100914B7C /* Recognizer.m */; };
 		B72742251AA5659100914B7C /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = B72742211AA5659100914B7C /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72742261AA5659100914B7C /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742221AA5659100914B7C /* Result.m */; };
-		B72742281AA565F100914B7C /* kvg_tomoe.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* kvg_tomoe.model */; };
+		B72742281AA565F100914B7C /* handwriting.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* handwriting.model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72588A41AA996C000BD42F7 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		B72588A51AA996C000BD42F7 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		B72588A61AA996C000BD42F7 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		B72588A71AA996C000BD42F7 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		B72588AC1AA99B4D00BD42F7 /* COPYING_LGPL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING_LGPL; sourceTree = "<group>"; };
 		B72741D41AA5643900914B7C /* ZinniaCocoaTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZinniaCocoaTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72741D81AA5643900914B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B72741D91AA5643900914B7C /* ZinniaCocoaTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZinniaCocoaTouch.h; sourceTree = "<group>"; };
@@ -79,7 +89,7 @@
 		B72742201AA5659100914B7C /* Recognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recognizer.m; sourceTree = "<group>"; };
 		B72742211AA5659100914B7C /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		B72742221AA5659100914B7C /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
-		B72742271AA565F100914B7C /* kvg_tomoe.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = kvg_tomoe.model; sourceTree = "<group>"; };
+		B72742271AA565F100914B7C /* handwriting.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = handwriting.model; sourceTree = "<group>"; };
 		B752547E1AA6A04B00831B44 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -138,7 +148,8 @@
 		B72741D71AA5643900914B7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B72742271AA565F100914B7C /* kvg_tomoe.model */,
+				B72588AC1AA99B4D00BD42F7 /* COPYING_LGPL */,
+				B72742271AA565F100914B7C /* handwriting.model */,
 				B72741D81AA5643900914B7C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -186,6 +197,10 @@
 				B72742041AA564C000914B7C /* zinnia_learn.cpp */,
 				B72742051AA564C000914B7C /* zinnia.cpp */,
 				B72742061AA564C000914B7C /* zinnia.h */,
+				B72588A41AA996C000BD42F7 /* COPYING */,
+				B72588A51AA996C000BD42F7 /* AUTHORS */,
+				B72588A61AA996C000BD42F7 /* NEWS */,
+				B72588A71AA996C000BD42F7 /* README */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -293,7 +308,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B72742281AA565F100914B7C /* kvg_tomoe.model in Resources */,
+				B72588AB1AA996C000BD42F7 /* README in Resources */,
+				B72588AD1AA99B4D00BD42F7 /* COPYING_LGPL in Resources */,
+				B72588A91AA996C000BD42F7 /* AUTHORS in Resources */,
+				B72588AA1AA996C000BD42F7 /* NEWS in Resources */,
+				B72588A81AA996C000BD42F7 /* COPYING in Resources */,
+				B72742281AA565F100914B7C /* handwriting.model in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
