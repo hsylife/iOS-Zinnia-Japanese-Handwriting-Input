@@ -4,7 +4,7 @@ Compared to static libraries, frameworks allow the inclusion of header files and
 
 For app extensions, frameworks can be shared with the main application.
 
-To use, simply add
+To use, simply include as a git submodule and add
 ``` 
 @import ZinniaCocoaTouch;
 ``` 
