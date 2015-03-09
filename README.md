@@ -12,3 +12,6 @@ to your files.
 
 A sample project includeing a keyboard extension can be found at https://github.com/shinjukunian/KanjiLookup.
 
+#Acknowledgements
+Zinnia (http://zinnia.sourceforge.net)
+The handwriting model uses data from Tomoe-Tegaki (http://tomoe.sourceforge.jp/cgi-bin/en/blog/index.rb) and KanjiVG (http://kanjivg.tagaini.net) using scripts by Roger Braun https://github.com/rogerbraun/KVG-Tools
