@@ -18,6 +18,10 @@
     
 }
 
+
+
+
+
 - (instancetype)initWithCanvas:(UIView *)canvas {
 	if (self = [super init]) {
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
@@ -29,6 +33,7 @@
 		
 		character  = zinnia_character_new();
 		zinnia_character_clear(character);
+        self.size=canvas.bounds.size;
 		zinnia_character_set_width(character, canvas.frame.size.width);
 		zinnia_character_set_height(character, canvas.frame.size.height);
 
@@ -37,6 +42,18 @@
 	
 	return self;
 }
+
+
+-(void)setSize:(CGSize)size{
+    _size=size;
+   
+    if (recognizer) {
+        zinnia_character_set_width(character, size.width);
+        zinnia_character_set_height(character, size.height);
+    }
+}
+
+
 
 - (NSArray *)classify:(NSArray *)points {
 

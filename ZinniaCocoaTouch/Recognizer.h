@@ -13,6 +13,8 @@
 @interface Recognizer : NSObject
 
 @property NSUInteger count;
+@property (nonatomic) CGSize size;
+
 
 - (instancetype)initWithCanvas:(UIView *)canvas;
 - (NSArray *)classify:(NSArray *)points;
