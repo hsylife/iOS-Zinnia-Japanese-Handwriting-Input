@@ -14,8 +14,13 @@
 
 @property NSUInteger count;
 
+@property (nonatomic) CGSize canvasSize;
+
+
 - (instancetype)initWithCanvas:(UIView *)canvas;
 - (NSArray *)classify:(NSArray *)points;
 - (void)clear;
+
+
 
 @end
