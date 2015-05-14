@@ -16,6 +16,9 @@
 @property (nonatomic) CGSize canvasSize;
 
 
+@property (nonatomic) CGSize canvasSize;
+
+
 - (instancetype)initWithCanvas:(UIView *)canvas;
 - (NSArray *)classify:(NSArray *)points;
 - (void)clear;
