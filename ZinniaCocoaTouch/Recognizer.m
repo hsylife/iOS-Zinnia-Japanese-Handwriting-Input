@@ -38,6 +38,13 @@
 	return self;
 }
 
+
+-(void)setCanvasSize:(CGSize)canvasSize{
+    _canvasSize=canvasSize;
+    zinnia_character_set_width(character, canvasSize.width);
+    zinnia_character_set_height(character, canvasSize.height);
+}
+
 - (NSArray *)classify:(NSArray *)points {
 
 	for (NSValue *value in points) {
