@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ZinniaCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>ZinniaCocoaTouch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B725FBCF1B05BD76002AAB18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B725FBD91B05BD76002AAB18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B72741D31AA5643900914B7C</key>
 		<dict>
 			<key>primary</key>

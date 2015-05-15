@@ -18,7 +18,7 @@
     
 }
 
-- (instancetype)initWithCanvas:(UIView *)canvas {
+- (instancetype)initWithCanvas:(VIEW *)canvas {
 	if (self = [super init]) {
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
 
@@ -48,7 +48,7 @@
 - (NSArray *)classify:(NSArray *)points {
 
 	for (NSValue *value in points) {
-		CGPoint point = [value CGPointValue];
+		CGPoint point = [value pointValue];
 		zinnia_character_add(character, _count, point.x, point.y);
 	}
 	
