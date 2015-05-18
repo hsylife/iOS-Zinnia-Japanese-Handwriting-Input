@@ -41,57 +41,100 @@
 
 
 @implementation Trainer{
-    zinnia_character_t *character;
-    zinnia_trainer_t *trainer;
+   
 }
 
 -(void)trainWithSEXPModels:(NSArray *)paths completion:(void (^)(BOOL, NSURL *))completion{
     
     NSMutableArray *characters=[NSMutableArray array];
+
+    
     for (NSURL *path in paths) {
         NSArray *pathArray =[self strokesFromSEXP:path];
         [characters addObjectsFromArray:pathArray];
     }
-  
+
+
+    
+    zinnia_character_t *character;
+    zinnia_trainer_t *trainer;
+    
     trainer=zinnia_trainer_new();
     character=zinnia_character_new();
     for (CharacterStroke *stroke in characters) {
-        NSString *kanji=stroke.character;
-        zinnia_character_set_value(character, [kanji cStringUsingEncoding:NSUTF8StringEncoding]);
-        zinnia_character_set_width(character, stroke.size.width);
-        zinnia_character_set_height(character, stroke.size.height);
-        
-        for (NSUInteger i=0; i<stroke.strokes.count; i++) {
-            NSArray *singleStrokeArray=stroke.strokes[i];
-            for (NSValue *strokeValue in singleStrokeArray) {
-                CGPoint point=[strokeValue pointValue];
-                zinnia_character_add(character, i, point.x, point.y);
+        /*
+          ":" (colon) is used by zinnia as a separator character in the temporary training text file, colon is added, conversion to training binary will fail
+
+         */
+        if (stroke.strokes.count>0 && stroke.size.height>0 && stroke.size.width>0 && ![stroke.character isEqualToString:@":"]) {
+            NSString *kanji=stroke.character;
+            zinnia_character_set_value(character, [kanji cStringUsingEncoding:NSUTF8StringEncoding]);
+            zinnia_character_set_width(character, stroke.size.width);
+            zinnia_character_set_height(character, stroke.size.height);
+            
+            for (NSUInteger i=0; i<stroke.strokes.count; i++) {
+                NSArray *singleStrokeArray=stroke.strokes[i];
+                for (NSValue *strokeValue in singleStrokeArray) {
+                    CGPoint point=[strokeValue pointValue];
+                    zinnia_character_add(character, i, point.x, point.y);
+                }
+                
             }
             
+            zinnia_trainer_add(trainer, character);
+            zinnia_character_clear(character);
+
+        }
+        else{
+            NSLog(@"invalid character: %@",stroke.character);
         }
         
-        zinnia_trainer_add(trainer, character);
-        zinnia_character_clear(character);
     }
+    
     NSString *outputName=[[[paths.firstObject lastPathComponent]stringByDeletingPathExtension]stringByAppendingString:@"_model"];
-    NSString *output=[[[paths.firstObject path]stringByDeletingLastPathComponent]stringByAppendingPathComponent:outputName];
+    NSString *output=[[[(NSURL*)paths.firstObject path]stringByDeletingLastPathComponent]stringByAppendingPathComponent:outputName];
     
     int returnvalue =zinnia_trainer_train(trainer, [output cStringUsingEncoding:NSUTF8StringEncoding]);
     
+    
+    zinnia_character_destroy(character);
+    zinnia_trainer_destroy(trainer);
     if (returnvalue==1) {
         completion(YES,[NSURL fileURLWithPath:output]);
     }
     else{
+        
         completion(NO,nil);
     }
     
    
 }
 
--(void)dealloc{
-    zinnia_character_destroy(character);
-    zinnia_trainer_destroy(trainer);
+
+-(void)convertTrainingData:(NSURL *)path compression:(double)compression completion:(void(^)(BOOL success, NSURL *output))completion{
+    
+    NSString *filename=path.path;
+    NSString *outpuName=[[filename stringByDeletingPathExtension]stringByAppendingPathExtension:@"binary"];
+    int success=  zinnia_trainer_convert_model([filename cStringUsingEncoding:NSUTF8StringEncoding], [outpuName cStringUsingEncoding:NSUTF8StringEncoding], compression);
+    
+    if (success==1) {
+        completion(YES,[NSURL fileURLWithPath:outpuName]);
+
+    }
+    else{
+        
+        completion(NO,nil);
+
+    }
+    
+    
 }
+
+
+
+
+
+
 
 
 -(NSArray*)strokesFromSEXP:(NSURL*)path{
@@ -145,12 +188,13 @@
                 }
                 
             }
+            
             CharacterStroke *newCharacter=[CharacterStroke new];
             newCharacter.character=value;
             newCharacter.size=CGSizeMake(width, height);
             newCharacter.strokes=strokes;
             [array addObject:newCharacter];
-
+            
         }
     }
     return array.copy;

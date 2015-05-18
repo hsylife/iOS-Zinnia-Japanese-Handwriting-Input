@@ -291,13 +291,21 @@ bool Trainer::convert(const char *text_filename,
   write_static<unsigned int> (bofs, msize);
 
   std::string line;
+ // std::string lineCopy;
   const size_t array_size = 8192 * 16;
   scoped_array<char *> col(new char* [array_size]);
   while (std::getline(ifs, line)) {
+  // lineCopy=line + "copy";
     char *buf = const_cast<char *>(line.c_str());
     const size_t size = tokenize(buf, " \t:", col.get(), array_size);
-    if (size < 5) return false;
-    if (size % 2 != 0) return false;
+      if (size < 5){
+        return false;
+      }
+      
+      if (size % 2 != 0){
+           std::cerr << "permission denied: " << line << std::endl;
+          return false;
+      }
     const float bias = std::atof(col[1]);
     char character[16];
     std::strncpy(character, col[0], sizeof(character));

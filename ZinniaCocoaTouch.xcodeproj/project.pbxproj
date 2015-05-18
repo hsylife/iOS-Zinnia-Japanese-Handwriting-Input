@@ -68,7 +68,6 @@
 		B72742251AA5659100914B7C /* Result.h in Headers */ = {isa = PBXBuildFile; fileRef = B72742211AA5659100914B7C /* Result.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B72742261AA5659100914B7C /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742221AA5659100914B7C /* Result.m */; };
 		B72742281AA565F100914B7C /* handwriting.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* handwriting.model */; };
-		B7C60F231B05B30E00BB9ACC /* Trainer.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C60F211B05B30E00BB9ACC /* Trainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7C60F241B05B30E00BB9ACC /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C60F221B05B30E00BB9ACC /* Trainer.m */; };
 /* End PBXBuildFile section */
 
@@ -342,7 +341,6 @@
 				B72742151AA564C000914B7C /* stream_wrapper.h in Headers */,
 				B727420C1AA564C000914B7C /* freelist.h in Headers */,
 				B72741DA1AA5643900914B7C /* ZinniaCocoaTouch.h in Headers */,
-				B7C60F231B05B30E00BB9ACC /* Trainer.h in Headers */,
 				B72742081AA564C000914B7C /* common.h in Headers */,
 				B72742091AA564C000914B7C /* config.h in Headers */,
 				B727420B1AA564C000914B7C /* feature.h in Headers */,
@@ -834,6 +832,7 @@
 				B725FBE41B05BD77002AAB18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B725FBE81B05BD77002AAB18 /* Build configuration list for PBXNativeTarget "ZinniaCocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -842,6 +841,7 @@
 				B725FBE61B05BD77002AAB18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B72741CE1AA5643900914B7C /* Build configuration list for PBXProject "ZinniaCocoaTouch" */ = {
 			isa = XCConfigurationList;

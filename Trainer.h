@@ -11,5 +11,8 @@
 @interface Trainer : NSObject
 
 -(void)trainWithSEXPModels:(NSArray *)paths completion:(void (^)(BOOL success, NSURL * outputpath))completion;
+-(void)convertTrainingData:(NSURL *)path compression:(double)compression completion:(void(^)(BOOL success, NSURL *output))completion;
+
+
 
 @end
