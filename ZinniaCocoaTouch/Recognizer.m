@@ -34,6 +34,7 @@
         zinnia_character_set_height(character, canvas.frame.size.height);
         
         _count = 0;
+        self.maxResults=10;
 
     }
     return self;
@@ -53,6 +54,7 @@
         zinnia_character_set_height(character, canvas.frame.size.height);
         
         _count = 0;
+        self.maxResults=10;
 	}
 	return self;
 }
