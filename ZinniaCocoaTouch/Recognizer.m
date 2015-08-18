@@ -22,8 +22,7 @@
 
 -(instancetype)initWithCanvas:(UIView *)canvas modelAtURL:(NSURL *)url{
     if (self =[super init]) {
-      
-        
+
         recognizer = zinnia_recognizer_new();
         if (!zinnia_recognizer_open(recognizer, url.fileSystemRepresentation)) {
             fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
