@@ -35,14 +35,14 @@
 
 @property NSUInteger count;
 @property (nonatomic) CGSize canvasSize;
-
+@property (nonatomic) NSUInteger maxResults;
 
 
 - (instancetype)initWithCanvas:(VIEW*)canvas;
 
 - (NSArray *)classify:(NSArray *)points;
 - (void)clear;
-
+-(instancetype)initWithCanvas:(VIEW*)canvas modelAtURL:(NSURL*)url;
 
 
 @end
