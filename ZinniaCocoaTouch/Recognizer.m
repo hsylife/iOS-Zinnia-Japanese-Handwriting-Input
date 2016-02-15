@@ -20,7 +20,7 @@
 
 
 
--(instancetype)initWithCanvas:(UIView *)canvas modelAtURL:(NSURL *)url{
+-(instancetype)initWithCanvas:(VIEW *)canvas modelAtURL:(NSURL *)url{
     if (self =[super init]) {
 
         recognizer = zinnia_recognizer_new();

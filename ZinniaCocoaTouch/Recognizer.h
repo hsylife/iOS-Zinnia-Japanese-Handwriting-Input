@@ -29,7 +29,7 @@
 
 
 
-
+@class Result;
 
 @interface Recognizer : NSObject
 
@@ -38,11 +38,11 @@
 @property (nonatomic) NSUInteger maxResults;
 
 
-- (instancetype)initWithCanvas:(VIEW*)canvas;
+- (nonnull instancetype)initWithCanvas:(nonnull VIEW*)canvas;
 
-- (NSArray *)classify:(NSArray *)points;
+- (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
 - (void)clear;
--(instancetype)initWithCanvas:(VIEW*)canvas modelAtURL:(NSURL*)url;
+-(nullable instancetype)initWithCanvas:(nonnull VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
 
 
 @end

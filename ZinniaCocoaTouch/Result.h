@@ -12,7 +12,7 @@
 @interface Result : NSObject {
 }
 
-@property (nonatomic, copy) NSString *value;
-@property (nonatomic, copy) NSNumber *score;
+@property (nonatomic, copy,nonnull) NSString *value;
+@property (nonatomic, copy,nonnull) NSNumber *score;
 
 @end
