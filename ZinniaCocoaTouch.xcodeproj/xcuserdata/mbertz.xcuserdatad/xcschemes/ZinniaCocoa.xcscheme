@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B72741D31AA5643900914B7C"
-               BuildableName = "ZinniaCocoaTouch.framework"
-               BlueprintName = "ZinniaCocoaTouch"
-               ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B72741DE1AA5643900914B7C"
-               BuildableName = "ZinniaCocoaTouchTests.xctest"
-               BlueprintName = "ZinniaCocoaTouchTests"
+               BlueprintIdentifier = "B725FBCF1B05BD76002AAB18"
+               BuildableName = "ZinniaCocoa.framework"
+               BlueprintName = "ZinniaCocoa"
                ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B72741DE1AA5643900914B7C"
-               BuildableName = "ZinniaCocoaTouchTests.xctest"
-               BlueprintName = "ZinniaCocoaTouchTests"
+               BlueprintIdentifier = "B725FBD91B05BD76002AAB18"
+               BuildableName = "ZinniaCocoaTests.xctest"
+               BlueprintName = "ZinniaCocoaTests"
                ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B72741D31AA5643900914B7C"
-            BuildableName = "ZinniaCocoaTouch.framework"
-            BlueprintName = "ZinniaCocoaTouch"
+            BlueprintIdentifier = "B725FBCF1B05BD76002AAB18"
+            BuildableName = "ZinniaCocoa.framework"
+            BlueprintName = "ZinniaCocoa"
             ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B72741D31AA5643900914B7C"
-            BuildableName = "ZinniaCocoaTouch.framework"
-            BlueprintName = "ZinniaCocoaTouch"
+            BlueprintIdentifier = "B725FBCF1B05BD76002AAB18"
+            BuildableName = "ZinniaCocoa.framework"
+            BlueprintName = "ZinniaCocoa"
             ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B72741D31AA5643900914B7C"
-            BuildableName = "ZinniaCocoaTouch.framework"
-            BlueprintName = "ZinniaCocoaTouch"
+            BlueprintIdentifier = "B725FBCF1B05BD76002AAB18"
+            BuildableName = "ZinniaCocoa.framework"
+            BlueprintName = "ZinniaCocoa"
             ReferencedContainer = "container:ZinniaCocoaTouch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

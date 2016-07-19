@@ -20,50 +20,61 @@
 
 
 
+-(instancetype)initWithCanvas:(VIEW *)canvas modelAtURL:(NSURL *)url{
+    if (self =[super init]) {
 
+        recognizer = zinnia_recognizer_new();
+        if (!zinnia_recognizer_open(recognizer, url.fileSystemRepresentation)) {
+            fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
+        }
+        
+        character  = zinnia_character_new();
+        zinnia_character_clear(character);
+        zinnia_character_set_width(character, canvas.frame.size.width);
+        zinnia_character_set_height(character, canvas.frame.size.height);
+        
+        _count = 0;
+        self.maxResults=10;
 
-- (instancetype)initWithCanvas:(UIView *)canvas {
-	if (self = [super init]) {
+    }
+    return self;
+}
+
+- (instancetype)initWithCanvas:(VIEW *)canvas {
+    if (self =[super init]) {
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
-
-		recognizer = zinnia_recognizer_new();
-		if (!zinnia_recognizer_open(recognizer, [path cStringUsingEncoding:NSASCIIStringEncoding])) {
-			fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
-		}
-		
-		character  = zinnia_character_new();
-		zinnia_character_clear(character);
-        self.size=canvas.bounds.size;
-		zinnia_character_set_width(character, canvas.frame.size.width);
-		zinnia_character_set_height(character, canvas.frame.size.height);
-
-		_count = 0;
+        recognizer = zinnia_recognizer_new();
+        if (!zinnia_recognizer_open(recognizer, [path cStringUsingEncoding:NSASCIIStringEncoding])) {
+            fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
+        }
+        
+        character  = zinnia_character_new();
+        zinnia_character_clear(character);
+        zinnia_character_set_width(character, canvas.frame.size.width);
+        zinnia_character_set_height(character, canvas.frame.size.height);
+        
+        _count = 0;
+        self.maxResults=10;
 	}
-	
 	return self;
 }
 
 
--(void)setSize:(CGSize)size{
-    _size=size;
-   
-    if (recognizer) {
-        zinnia_character_set_width(character, size.width);
-        zinnia_character_set_height(character, size.height);
-    }
+-(void)setCanvasSize:(CGSize)canvasSize{
+    _canvasSize=canvasSize;
+    zinnia_character_set_width(character, canvasSize.width);
+    zinnia_character_set_height(character, canvasSize.height);
 }
-
-
 
 - (NSArray *)classify:(NSArray *)points {
 
 	for (NSValue *value in points) {
-		CGPoint point = [value CGPointValue];
+		CGPoint point = [value pointValue];
 		zinnia_character_add(character, _count, point.x, point.y);
 	}
 	
 	zinnia_result_t *result;
-	result = zinnia_recognizer_classify(recognizer, character, 10);
+	result = zinnia_recognizer_classify(recognizer, character, self.maxResults);
 	if (result == NULL) {
 		fprintf(stderr, "%s\n", zinnia_recognizer_strerror(recognizer));
 		return nil;
