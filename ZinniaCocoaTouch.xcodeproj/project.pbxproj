@@ -69,6 +69,12 @@
 		B72742261AA5659100914B7C /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742221AA5659100914B7C /* Result.m */; };
 		B72742281AA565F100914B7C /* handwriting.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* handwriting.model */; };
 		B76BF34E1B838F43008C7B19 /* Trainer.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C60F211B05B30E00BB9ACC /* Trainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B79D57551DFEB0B2004DE9BE /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = B72588A41AA996C000BD42F7 /* COPYING */; };
+		B79D57561DFEB0B2004DE9BE /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = B72588A51AA996C000BD42F7 /* AUTHORS */; };
+		B79D57571DFEB0B2004DE9BE /* NEWS in Resources */ = {isa = PBXBuildFile; fileRef = B72588A61AA996C000BD42F7 /* NEWS */; };
+		B79D57581DFEB0B2004DE9BE /* README in Resources */ = {isa = PBXBuildFile; fileRef = B72588A71AA996C000BD42F7 /* README */; };
+		B79D57591DFEB0BB004DE9BE /* COPYING_LGPL in Resources */ = {isa = PBXBuildFile; fileRef = B72588AC1AA99B4D00BD42F7 /* COPYING_LGPL */; };
+		B79D575A1DFEB0BC004DE9BE /* handwriting.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* handwriting.model */; };
 		B7C60F241B05B30E00BB9ACC /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C60F221B05B30E00BB9ACC /* Trainer.m */; };
 /* End PBXBuildFile section */
 
@@ -479,6 +485,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79D57551DFEB0B2004DE9BE /* COPYING in Resources */,
+				B79D57561DFEB0B2004DE9BE /* AUTHORS in Resources */,
+				B79D57591DFEB0BB004DE9BE /* COPYING_LGPL in Resources */,
+				B79D575A1DFEB0BC004DE9BE /* handwriting.model in Resources */,
+				B79D57571DFEB0B2004DE9BE /* NEWS in Resources */,
+				B79D57581DFEB0B2004DE9BE /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
