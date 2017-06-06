@@ -42,10 +42,10 @@ extern "C" {
   ZINNIA_DLL_EXTERN int zinnia_do(int argc, char **argv);
   ZINNIA_DLL_EXTERN int zinnia_learn(int argc, char **argv);
   ZINNIA_DLL_EXTERN int zinnia_convert(int argc, char **argv);
-  ZINNIA_DLL_EXTERN const char* zinnia_version();
+  ZINNIA_DLL_EXTERN const char* zinnia_version(void);
 
   /* character */
-  ZINNIA_DLL_EXTERN zinnia_character_t*  zinnia_character_new();
+    ZINNIA_DLL_EXTERN zinnia_character_t*  zinnia_character_new(void);
   ZINNIA_DLL_EXTERN void        zinnia_character_destroy(zinnia_character_t *character);
   ZINNIA_DLL_EXTERN void        zinnia_character_set_value(zinnia_character_t *character, const char *str);
   ZINNIA_DLL_EXTERN void        zinnia_character_set_value2(zinnia_character_t *character, const char *str, size_t length);
@@ -72,7 +72,7 @@ extern "C" {
   ZINNIA_DLL_EXTERN void        zinnia_result_destroy(zinnia_result_t *result);
 
   /* Recognizer */
-  ZINNIA_DLL_EXTERN zinnia_recognizer_t *zinnia_recognizer_new();
+  ZINNIA_DLL_EXTERN zinnia_recognizer_t *zinnia_recognizer_new(void);
   ZINNIA_DLL_EXTERN void                zinnia_recognizer_destroy(zinnia_recognizer_t *recognizer);
   ZINNIA_DLL_EXTERN int                 zinnia_recognizer_open(zinnia_recognizer_t *recognizer, const char *filename);
   ZINNIA_DLL_EXTERN int                 zinnia_recognizer_open_from_ptr(zinnia_recognizer_t *recognizer,
@@ -86,7 +86,7 @@ extern "C" {
                                                                 size_t nbest);
 
   /* Trainer */
-  ZINNIA_DLL_EXTERN zinnia_trainer_t *zinnia_trainer_new();
+  ZINNIA_DLL_EXTERN zinnia_trainer_t *zinnia_trainer_new(void);
   ZINNIA_DLL_EXTERN void             zinnia_trainer_destroy(zinnia_trainer_t *trainer);
   ZINNIA_DLL_EXTERN int              zinnia_trainer_add(zinnia_trainer_t *trainer, const zinnia_character_t* character);
   ZINNIA_DLL_EXTERN void             zinnia_trainer_clear(zinnia_trainer_t *trainer);
