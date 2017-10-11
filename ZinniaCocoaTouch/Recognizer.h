@@ -37,12 +37,18 @@
 @property (nonatomic) CGSize canvasSize;
 @property (nonatomic) NSUInteger maxResults;
 
+-(nonnull instancetype)initWithSize:(CGSize)canvasSize;
 
-- (nonnull instancetype)initWithCanvas:(nonnull VIEW*)canvas;
+#if WATCH_OS
+#else
+-(nonnull instancetype)initWithCanvas:(nonnull VIEW*)canvas;
+-(nullable instancetype)initWithCanvas:(nonnull VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
+#endif
+
 
 - (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
 - (void)clear;
--(nullable instancetype)initWithCanvas:(nonnull VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
+
 
 
 @end

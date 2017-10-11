@@ -20,9 +20,30 @@
 
 
 
+-(nonnull instancetype)initWithSize:(CGSize)canvasSize{
+    if (self =[super init]) {
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
+        recognizer = zinnia_recognizer_new();
+        if (!zinnia_recognizer_open(recognizer, [path cStringUsingEncoding:NSASCIIStringEncoding])) {
+            fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
+        }
+        
+        character  = zinnia_character_new();
+        zinnia_character_clear(character);
+        zinnia_character_set_width(character, canvasSize.width);
+        zinnia_character_set_height(character,  canvasSize.height);
+        
+        _count = 0;
+        self.maxResults=10;
+    }
+    return self;
+}
+
+#if WATCH_OS
+#else
 -(instancetype)initWithCanvas:(VIEW *)canvas modelAtURL:(NSURL *)url{
     if (self =[super init]) {
-
+        
         recognizer = zinnia_recognizer_new();
         if (!zinnia_recognizer_open(recognizer, url.fileSystemRepresentation)) {
             fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
@@ -35,29 +56,18 @@
         
         _count = 0;
         self.maxResults=10;
-
+        
     }
     return self;
 }
 
 - (instancetype)initWithCanvas:(VIEW *)canvas {
-    if (self =[super init]) {
-        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
-        recognizer = zinnia_recognizer_new();
-        if (!zinnia_recognizer_open(recognizer, [path cStringUsingEncoding:NSASCIIStringEncoding])) {
-            fprintf(stderr, "ERROR: %s\n", zinnia_recognizer_strerror(recognizer));
-        }
-        
-        character  = zinnia_character_new();
-        zinnia_character_clear(character);
-        zinnia_character_set_width(character, canvas.frame.size.width);
-        zinnia_character_set_height(character, canvas.frame.size.height);
-        
-        _count = 0;
-        self.maxResults=10;
-	}
-	return self;
+    return [self initWithSize:canvas.frame.size];
 }
+#endif
+
+
+
 
 
 -(void)setCanvasSize:(CGSize)canvasSize{

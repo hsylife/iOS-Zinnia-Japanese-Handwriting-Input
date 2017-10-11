@@ -7,16 +7,26 @@
 		<key>ZinniaCocoa.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>1</integer>
 		</dict>
 		<key>ZinniaCocoaTouch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>0</integer>
+		</dict>
+		<key>ZinniaCocoa_watchOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5A844D981F8E10F1009F8D3C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B725FBCF1B05BD76002AAB18</key>
 		<dict>
 			<key>primary</key>
