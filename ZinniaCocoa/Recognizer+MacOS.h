@@ -7,6 +7,7 @@
 //
 
 #import "Recognizer.h"
+#import <AppKit/AppKit.h>
 
 @interface Recognizer (MacOS)
 

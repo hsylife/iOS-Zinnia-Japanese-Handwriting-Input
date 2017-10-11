@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A94D64F1F8E15CC00234437 /* ZinniaCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B725FBD41B05BD76002AAB18 /* ZinniaCocoa.h */; };
+		5A3C393F1F8E40A0003B21C1 /* ZinniaCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B725FBD41B05BD76002AAB18 /* ZinniaCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A3C39401F8E420B003B21C1 /* handwriting.model in Resources */ = {isa = PBXBuildFile; fileRef = B72742271AA565F100914B7C /* handwriting.model */; };
 		5A94D6591F8E17E000234437 /* ZinniaCocoaWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A94D6571F8E17E000234437 /* ZinniaCocoaWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A94D65D1F8E17EA00234437 /* Recognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B727421F1AA5659100914B7C /* Recognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A94D65E1F8E17F200234437 /* Recognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B72742201AA5659100914B7C /* Recognizer.m */; };
@@ -393,7 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B725FC001B05BDB6002AAB18 /* sexp.h in Headers */,
-				5A94D64F1F8E15CC00234437 /* ZinniaCocoa.h in Headers */,
 				B725FBFC1B05BDB6002AAB18 /* param.h in Headers */,
 				5A94D6811F8E1ACD00234437 /* Recognizer+MacOS.h in Headers */,
 				B725FC031B05BDB6002AAB18 /* svm.h in Headers */,
@@ -409,6 +409,7 @@
 				B725FBF81B05BDB6002AAB18 /* freelist.h in Headers */,
 				B725FBEC1B05BD9B002AAB18 /* Recognizer.h in Headers */,
 				B725FBF51B05BDB6002AAB18 /* config.h in Headers */,
+				5A3C393F1F8E40A0003B21C1 /* ZinniaCocoa.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A94D6751F8E183E00234437 /* COPYING in Resources */,
+				5A3C39401F8E420B003B21C1 /* handwriting.model in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

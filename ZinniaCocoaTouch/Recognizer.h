@@ -9,21 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "TargetConditionals.h"
-
 #if TARGET_OS_IPHONE
 #define valueWithPoint valueWithCGPoint
 #define pointValue CGPointValue
 #import <UIKit/UIKit.h>
-#else
-#import <AppKit/AppKit.h>
 #endif
 
-
-
-
-
 @class Result;
-
 @interface Recognizer : NSObject
 
 @property NSUInteger count;
@@ -33,8 +25,7 @@
 -(nonnull instancetype)initWithSize:(CGSize)canvasSize;
 -(nonnull instancetype)initWithSize:(CGSize)canvasSize modelAtURL:(nonnull NSURL*)url;
 
-
-- (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
-- (void)clear;
+-(nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
+-(void)clear;
 
 @end

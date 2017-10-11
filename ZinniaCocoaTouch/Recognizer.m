@@ -10,6 +10,8 @@
 #import "Result.h"
 #import "zinnia.h"
 
+
+
 @implementation Recognizer{
     
     zinnia_recognizer_t *recognizer;
