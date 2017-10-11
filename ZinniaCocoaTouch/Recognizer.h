@@ -11,17 +11,10 @@
 #import "TargetConditionals.h"
 
 #if TARGET_OS_IPHONE
-@import UIKit;
-
 #define valueWithPoint valueWithCGPoint
 #define pointValue CGPointValue
-
-#define VIEW UIView
-
+#import <UIKit/UIKit.h>
 #else
-
-#define VIEW NSView
-
 #import <AppKit/AppKit.h>
 #endif
 
@@ -37,12 +30,11 @@
 @property (nonatomic) CGSize canvasSize;
 @property (nonatomic) NSUInteger maxResults;
 
+-(nonnull instancetype)initWithSize:(CGSize)canvasSize;
+-(nonnull instancetype)initWithSize:(CGSize)canvasSize modelAtURL:(nonnull NSURL*)url;
 
-- (nonnull instancetype)initWithCanvas:(nonnull VIEW*)canvas;
 
 - (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
 - (void)clear;
--(nullable instancetype)initWithCanvas:(nonnull VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
-
 
 @end
