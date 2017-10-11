@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Morten Bertz. All rights reserved.
 //
 
+
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for ZinniaCocoa.
@@ -20,3 +21,4 @@ FOUNDATION_EXPORT const unsigned char ZinniaCocoaVersionString[];
 #import "Recognizer.h"
 #import "Result.h"
 #import "Trainer.h"
+#import "Recognizer+MacOS.h"

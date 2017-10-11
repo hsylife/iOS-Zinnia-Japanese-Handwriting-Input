@@ -19,7 +19,6 @@
 }
 
 
-
 -(nonnull instancetype)initWithSize:(CGSize)canvasSize{
     if (self =[super init]) {
         NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"handwriting" ofType:@"model"];
@@ -39,9 +38,8 @@
     return self;
 }
 
-#if WATCH_OS
-#else
--(instancetype)initWithCanvas:(VIEW *)canvas modelAtURL:(NSURL *)url{
+
+-(instancetype)initWithSize:(CGSize)canvasSize modelAtURL:(NSURL *)url{
     if (self =[super init]) {
         
         recognizer = zinnia_recognizer_new();
@@ -51,8 +49,8 @@
         
         character  = zinnia_character_new();
         zinnia_character_clear(character);
-        zinnia_character_set_width(character, canvas.frame.size.width);
-        zinnia_character_set_height(character, canvas.frame.size.height);
+        zinnia_character_set_width(character, canvasSize.width);
+        zinnia_character_set_height(character,canvasSize.height);
         
         _count = 0;
         self.maxResults=10;
@@ -60,11 +58,6 @@
     }
     return self;
 }
-
-- (instancetype)initWithCanvas:(VIEW *)canvas {
-    return [self initWithSize:canvas.frame.size];
-}
-#endif
 
 
 

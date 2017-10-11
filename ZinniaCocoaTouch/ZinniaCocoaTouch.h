@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char ZinniaCocoaTouchVersionString[];
 #import "Recognizer.h"
 #import "Result.h"
 #import "Trainer.h"
+#import "Recognizer+iOS.h"
