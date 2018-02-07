@@ -38,11 +38,11 @@
 @property (nonatomic) NSUInteger maxResults;
 
 
-- (nonnull instancetype)initWithCanvas:(nonnull VIEW*)canvas;
+- (nonnull instancetype)initWithCanvas:(nullable VIEW*)canvas;
 
 - (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
 - (void)clear;
--(nullable instancetype)initWithCanvas:(nonnull VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
+-(nullable instancetype)initWithCanvas:(nullable VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
 
 
 @end

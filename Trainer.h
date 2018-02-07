@@ -7,12 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+@interface CharacterStroke :NSObject
+
+@property (nonnull)NSString *character;
+@property CGSize size;
+@property (nonnull) NSArray <NSArray<NSValue*>*> *strokes;
+
+@end
+
+
 
 @interface Trainer : NSObject
 
--(void)trainWithSEXPModels:(NSArray *)paths completion:(void (^)(BOOL success, NSURL * outputpath))completion;
--(void)convertTrainingData:(NSURL *)path compression:(double)compression completion:(void(^)(BOOL success, NSURL *output))completion;
+-(void)trainWithSEXPModels:(nonnull NSArray <NSURL*>*)paths completion:(void (^ _Nonnull )(BOOL success,  NSURL * _Nullable  outputpath))completion;
+-(void)convertTrainingData:(nonnull NSURL *)path compression:(double)compression completion:(void(^_Nonnull)(BOOL success, NSURL * _Nullable output))completion;
+-(void)trainWithCharacters:(nonnull NSArray <CharacterStroke*>*)characters completion:(void (^_Nonnull)(BOOL, NSURL *_Nullable))completion;
+-(nonnull instancetype)initWithURL:(nonnull NSURL*)url;
 
 
++(nonnull NSArray <CharacterStroke*>*)convertSEXP:(nonnull NSArray <NSURL*>*)paths;
 
 @end
