@@ -23,7 +23,13 @@
 #endif
 
 
+@interface CharacterStroke :NSObject
 
+@property NSString *character;
+@property CGSize size;
+@property NSArray *strokes;
+
+@end
 
 
 @implementation CharacterStroke
@@ -32,23 +38,11 @@
 
 @end
 
-@interface Trainer ()
-
-@property NSURL *outURL;
-
-@end
-
-@implementation Trainer
 
 
--(instancetype)initWithURL:(NSURL *)url{
-    self=[super init];
-    if (self) {
-        self.outURL=url;
-    }
-    return self;
+@implementation Trainer{
+   
 }
-
 
 -(void)trainWithSEXPModels:(NSArray *)paths completion:(void (^)(BOOL, NSURL *))completion{
     
@@ -59,16 +53,9 @@
         NSArray *pathArray =[self strokesFromSEXP:path];
         [characters addObjectsFromArray:pathArray];
     }
-    if (!self.outURL) {
-        NSString *outputName=[[[paths.firstObject lastPathComponent]stringByDeletingPathExtension]stringByAppendingString:@"_model"];
-        NSString *output=[[[(NSURL*)paths.firstObject path]stringByDeletingLastPathComponent]stringByAppendingPathComponent:outputName];
-        self.outURL=[NSURL fileURLWithPath:output];
-    }
-    [self trainWithCharacters:characters completion:completion];
-}
 
 
--(void)trainWithCharacters:(NSArray <CharacterStroke*>*)characters completion:(void (^)(BOOL, NSURL *))completion{
+    
     zinnia_character_t *character;
     zinnia_trainer_t *trainer;
     
@@ -76,8 +63,8 @@
     character=zinnia_character_new();
     for (CharacterStroke *stroke in characters) {
         /*
-         ":" (colon) is used by zinnia as a separator character in the temporary training text file, colon is added, conversion to training binary will fail
-         
+          ":" (colon) is used by zinnia as a separator character in the temporary training text file, colon is added, conversion to training binary will fail
+
          */
         if (stroke.strokes.count>0 && stroke.size.height>0 && stroke.size.width>0 && ![stroke.character isEqualToString:@":"]) {
             NSString *kanji=stroke.character;
@@ -96,7 +83,7 @@
             
             zinnia_trainer_add(trainer, character);
             zinnia_character_clear(character);
-            
+
         }
         else{
             NSLog(@"invalid character: %@",stroke.character);
@@ -104,19 +91,23 @@
         
     }
     
-    int returnvalue =zinnia_trainer_train(trainer, [self.outURL.path cStringUsingEncoding:NSUTF8StringEncoding]);
+    NSString *outputName=[[[paths.firstObject lastPathComponent]stringByDeletingPathExtension]stringByAppendingString:@"_model"];
+    NSString *output=[[[(NSURL*)paths.firstObject path]stringByDeletingLastPathComponent]stringByAppendingPathComponent:outputName];
+    
+    int returnvalue =zinnia_trainer_train(trainer, [output cStringUsingEncoding:NSUTF8StringEncoding]);
     
     
     zinnia_character_destroy(character);
     zinnia_trainer_destroy(trainer);
     if (returnvalue==1) {
-        completion(YES,self.outURL);
+        completion(YES,[NSURL fileURLWithPath:output]);
     }
     else{
         
         completion(NO,nil);
     }
-
+    
+   
 }
 
 
@@ -140,15 +131,6 @@
 }
 
 
-+(nonnull NSArray <CharacterStroke*>*)convertSEXP:(nonnull NSArray <NSURL*>*)paths{
-    Trainer *t=[Trainer new];
-    NSMutableArray *characters=[NSMutableArray array];
-    for (NSURL *path in paths) {
-        NSArray *pathArray =[t strokesFromSEXP:path];
-        [characters addObjectsFromArray:pathArray];
-    }
-    return characters.copy;
-}
 
 
 

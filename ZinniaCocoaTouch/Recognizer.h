@@ -25,11 +25,7 @@
 -(nonnull instancetype)initWithSize:(CGSize)canvasSize;
 -(nonnull instancetype)initWithSize:(CGSize)canvasSize modelAtURL:(nonnull NSURL*)url;
 
-- (nonnull instancetype)initWithCanvas:(nullable VIEW*)canvas;
-
-- (nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
-- (void)clear;
--(nullable instancetype)initWithCanvas:(nullable VIEW*)canvas modelAtURL:(nonnull NSURL*)url;
-
+-(nonnull NSArray <Result *> *)classify:(nonnull NSArray <NSValue*>*)points;
+-(void)clear;
 
 @end
