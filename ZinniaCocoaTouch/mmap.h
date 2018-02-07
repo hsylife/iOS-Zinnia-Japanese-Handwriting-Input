@@ -163,7 +163,7 @@ template <class T> class Mmap {
     CHECK_CLOSE_FALSE(fstat(fd, &st) >= 0)
         << "failed to get file size: " << filename;
 
-    length = st.st_size;
+    length = (unsigned long)st.st_size;
 
 #ifdef HAVE_MMAP
     int prot = PROT_READ;
